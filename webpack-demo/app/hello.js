@@ -5,6 +5,6 @@
 
 module.exports = function () {
   let hello = document.createElement('h1');
-  hello.textContent = 'HHello, Webpack!ello, Webpack!';
+  hello.textContent = 'Webpack!';
   return hello;
 };
