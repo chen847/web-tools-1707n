@@ -19,7 +19,7 @@ const sass = require('gulp-sass');
 // 3. 定义一个 gulp 的任务 task
 gulp.task('default', () => {
     console.log('Hello, gulp!');
-    // gulp.run('scripts');
+    // gulp.run('scripts', '');
 });
 
 gulp.task('hint', () => {
