@@ -1,4 +1,6 @@
 /**
+ * gulp 的作用：
+ * 1. 检查 js 文件
  * https://github.com/thu/web-tools-1707n
  * Date: 2017/12/15 10:19
  */
@@ -8,8 +10,28 @@
 // 1. 安装
 // 2. 引入
 const gulp = require('gulp');
+const jshint = require('gulp-jshint');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
 
 // 3. 定义一个 gulp 的任务 task
 gulp.task('default', () => {
-   console.log('Hello, gulp!');
+    // console.log('Hello, gulp!');
+    gulp.run('scripts');
+});
+
+gulp.task('hint', () => {
+    gulp.src('./js/*.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'));
+});
+
+gulp.task('scripts', () => {
+    gulp.src('./js/*.js')
+        .pipe(concat('all.js'))
+        .pipe(gulp.dest('./dist'))
+        .pipe(rename('all.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist'));
 });

@@ -13,7 +13,11 @@ Day 01
 9. 在 WebStorm 里打开命令行，快捷键是： Alt + F12，进入当前目录，执行命令：gulp + 回车
 10. 安装 jshint 为项目的开发依赖，gulp-demo/ cmd:
 cnpm i --save-dev jshint gulp-jshint
-
-
+11. 引用 gulp-jshint：const jshint = require('gulp-jshint');
+12. 定义任务一个 gulp 任务：
+	12.1 gulp.task('hint', () => {});
+	12.2 gulp-jshint 插件的作用是检查 js 文件的语法错误 
+13. 在 default 任务中，声明执行这个 hint 任务：gulp.run('hint');
+14. 安装 gulp-concat gulp-uglify gulp-rename 为项目的开发依赖，gulp-demo/ cmd: cnpm i --save-dev gulp-concat gulp-uglify gulp-rename
 
 
