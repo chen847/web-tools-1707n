@@ -3,6 +3,11 @@ Day 01
 
 1. gulp、webpack、mocha、yeoman 都是 Node.js 的第三方模块，都是与 web 项目有关的工具模块
 2. gulp 的使用，官网：https://gulpjs.com/； 中文：https://www.gulpjs.com.cn/
-3. 安装 gulp 为全局模块，cmd：cnpm i -g gulp
+3. 安装 gulp 为全局模块，任意目录 cmd：cnpm i -g gulp
 4. 创建项目的配置文件：package.json，gulp-demo/ cmd: npm init
 5. 安装 gulp 为项目的开发依赖，gulp-demo/ cmd: cnpm i --save-dev gulp
+6. 创建文件：gulp-demo/gulpfile.js
+
+
+
+
