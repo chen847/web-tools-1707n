@@ -3,8 +3,8 @@
  * Date: 2017/12/15 15:50
  */
 
-exports = function () {
-  let hello = document.createElement('div');
-  hello.textContent = 'Hello, Webpack!';
+module.exports = function () {
+  let hello = document.createElement('h1');
+  hello.textContent = 'HHello, Webpack!ello, Webpack!';
   return hello;
 };

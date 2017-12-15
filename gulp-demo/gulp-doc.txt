@@ -47,7 +47,7 @@ cnpm i --save-dev jshint gulp-jshint
 	19.4 gulp.dest();
 	19.5 gulp.watch();
 
-二、webpack
+二、webpack，web 项目的打包工具
 20. 创建目录：webpack-demo
 21. 安装全局第三方模块 webpack，任意目录下，cmd：cnpm i -g webpack
 22. 项目目录下创建 package.json 文件，cmd: npm init
@@ -57,3 +57,6 @@ cnpm i --save-dev jshint gulp-jshint
 26. 创建目录，当前目录下：app
 26. 创建文件：app/hello.js
 27. 创建文件：app/main.js
+28. 当前目录执行，cmd：webpack app/main.js public/bundle.js
+29. 浏览器打开 public/index.html：Hello，Webpack！
+
