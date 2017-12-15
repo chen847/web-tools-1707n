@@ -42,5 +42,6 @@ cnpm i --save-dev jshint gulp-jshint
 	19.2 gulp.run();
 	19.3 gulp.src();
 	19.4 gulp.dest();
+	19.5 gulp.watch();
 
 

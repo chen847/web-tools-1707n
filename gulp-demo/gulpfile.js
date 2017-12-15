@@ -18,8 +18,10 @@ const sass = require('gulp-sass');
 
 // 3. 定义一个 gulp 的任务 task
 gulp.task('default', () => {
-    console.log('Hello, gulp!');
-    // gulp.run('scripts', '');
+    // console.log('Hello, gulp!');
+    gulp.watch('./js/*.js', () => {
+        gulp.run('scripts');
+    });
 });
 
 gulp.task('hint', () => {
@@ -30,7 +32,7 @@ gulp.task('hint', () => {
 
 // gulp-concat, gulp-rename, gulp-uglify,
 gulp.task('scripts', () => {
-    gulp.src('./js/*.js')
+    gulp.src(['./js/jquery-3.2.1.js', './js/toggle.js'])
         .pipe(concat('all.js'))
         .pipe(gulp.dest('./dist'))
         .pipe(rename('all.min.js'))
