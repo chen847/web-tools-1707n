@@ -19,5 +19,7 @@ cnpm i --save-dev jshint gulp-jshint
 	12.2 gulp-jshint 插件的作用是检查 js 文件的语法错误 
 13. 在 default 任务中，声明执行这个 hint 任务：gulp.run('hint');
 14. 安装 gulp-concat gulp-uglify gulp-rename 为项目的开发依赖，gulp-demo/ cmd: cnpm i --save-dev gulp-concat gulp-uglify gulp-rename
+15. scripts 任务
+16. 安装 gulp-sass 项目的开发依赖，gulp-demo/ cmd: cnpm i --save-dev gulp-sass
 
 

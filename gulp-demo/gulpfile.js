@@ -14,11 +14,12 @@ const jshint = require('gulp-jshint');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
+const sass = require('gulp-sass');
 
 // 3. 定义一个 gulp 的任务 task
 gulp.task('default', () => {
-    // console.log('Hello, gulp!');
-    gulp.run('scripts');
+    console.log('Hello, gulp!');
+    // gulp.run('scripts');
 });
 
 gulp.task('hint', () => {
@@ -27,6 +28,7 @@ gulp.task('hint', () => {
         .pipe(jshint.reporter('default'));
 });
 
+// gulp-concat, gulp-rename, gulp-uglify,
 gulp.task('scripts', () => {
     gulp.src('./js/*.js')
         .pipe(concat('all.js'))
@@ -35,3 +37,10 @@ gulp.task('scripts', () => {
         .pipe(uglify())
         .pipe(gulp.dest('./dist'));
 });
+
+gulp.task('sass', () => {
+    gulp.src('./sass/*.sass')
+        .pipe(sass())
+        .pipe(gulp.dest('./css'));
+});
+
