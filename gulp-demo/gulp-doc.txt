@@ -1,7 +1,12 @@
 Web tools
 Day 01
 
-1. gulp、webpack、mocha、yeoman 都是 Node.js 的第三方模块，都是与 web 项目有关的工具模块
+1. grunt gulp、webpack、mocha、yeoman 都是 Node.js 的第三方模块，都是与 web 项目有关的工具模块
+	1.1 检查 js 的语法错误
+	1.2 合并和压缩 js 文件
+	1.3 编译 css 预处理器文件
+	1.4 其它的作用
+		
 2. gulp 的使用，官网：https://gulpjs.com/； 中文：https://www.gulpjs.com.cn/
 3. 安装 gulp 为全局模块，任意目录 cmd：cnpm i -g gulp
 4. 创建项目的配置文件：package.json，gulp-demo/ cmd: npm init
@@ -32,5 +37,10 @@ cnpm i --save-dev jshint gulp-jshint
 	gulp.src('./sass/*.sass') // 指定要处理的源文件
 	    .pipe(sass()) // 编译 sass 文件为 css 文件
 	    .pipe(gulp.dest('./css')); // 生成的 css 文件放入 css 目录中
+19. gulp 的函数：
+	19.1 gulp.task();
+	19.2 gulp.run();
+	19.3 gulp.src();
+	19.4 gulp.dest();
 
 
